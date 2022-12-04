@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.cloud;
 
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
@@ -34,7 +34,6 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
-
 
 public class MainActivity extends AppCompatActivity {
     private static String TAG = "awsexample";
@@ -199,10 +198,7 @@ public class MainActivity extends AppCompatActivity {
 
             real_time.setData(real_time_data);
         } catch (JSONException e) {
-
             Log.d(TAG, "showResult : ", e);
         }
-
-
     }
 }
