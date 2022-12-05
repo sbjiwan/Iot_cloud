@@ -14,6 +14,7 @@ public class WeekPagerAdapter extends FragmentStateAdapter {
         super(fa);
     }
 
+    // 각 페이지를 나타내는 프래그먼트 반환
     @NonNull
     @Override
     public Fragment createFragment(int position) {
@@ -24,6 +25,7 @@ public class WeekPagerAdapter extends FragmentStateAdapter {
         return weekFragment;
     }
 
+    // 전체 페이지 개수 반환
     @Override
     public int getItemCount() {
         return NUM_ITEMS;
