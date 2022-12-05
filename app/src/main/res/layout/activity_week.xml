@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_week"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black">
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_weight="1"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/day_button"
+            android:layout_width="160dp"
+            android:layout_height="24dp"
+            android:background="@drawable/unselect_item"
+            android:onClick="OnDay"
+            android:text="1일"
+            android:textColor="@color/white"
+            />
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_weight="1"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/week_button"
+            android:layout_width="160dp"
+            android:layout_height="24dp"
+            android:background="@drawable/select_item"
+            android:clickable="false"
+            android:text="1주"
+            android:textColor="@color/white"
+            />
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager_week"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <!--    -->
+    <!--    <com.github.mikephil.charting.charts.BarChart-->
+    <!--        android:id="@+id/time"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:background="@color/black"-->
+    <!--        />-->
+
+</LinearLayout>
