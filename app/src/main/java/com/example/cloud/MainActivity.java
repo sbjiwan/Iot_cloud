@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
                     WeekPoint += week_check / 7;
                     week_check = 0;
                 }
-                System.out.println(week_check + " " + DayPoint + " " + position  + " " + WeekPoint);
             }
         });
     }
@@ -59,7 +58,6 @@ public class MainActivity extends AppCompatActivity {
                     WeekPoint += week_check / 7;
                     week_check = 0;
                 }
-                System.out.println(week_check + " " + DayPoint + " " + position  + " " + WeekPoint);
             }
         });
     }
@@ -78,7 +76,6 @@ public class MainActivity extends AppCompatActivity {
             public void onPageSelected(int position) {
                 DayPoint += (position - WeekPoint) * 7;
                 WeekPoint = position;
-                System.out.println(week_check + " " + DayPoint + " " + position  + " " + WeekPoint);
             }
         });
     }

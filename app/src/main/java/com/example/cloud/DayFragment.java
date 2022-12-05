@@ -170,6 +170,8 @@ public class DayFragment extends Fragment {
             String awake[] = jsonObjectBody.getString(TAG_TIMESTAMP).split(":");
 
             int sleep_h = Integer.parseInt(sleep[0]);
+            if(sleep_h < 10)
+                sleep_h += 24;
             float sleep_m = Float.parseFloat(sleep[1]) / 60;
             int objective_h = Integer.parseInt(objective[0]);
             float objective_m = Float.parseFloat(objective[1]) / 60;

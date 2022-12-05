@@ -179,11 +179,15 @@ public class WeekFragment extends Fragment {
             String awake[] = jsonObjectBody.getString(TAG_TIMESTAMP).split(":");
 
             int sleep_h = Integer.parseInt(sleep[0]);
+            if(sleep_h < 10)
+                sleep_h += 24;
             float sleep_m = Float.parseFloat(sleep[1]) / 60;
             int objective_h = Integer.parseInt(objective[0]);
             float objective_m = Float.parseFloat(objective[1]) / 60;
             int awake_h = Integer.parseInt(awake[0]);
             float awake_m = Float.parseFloat(awake[1]) / 60;
+
+            System.out.println(sleep_h + " : " + sleep_m + " / " + objective_h + " : " + objective_m + " / " + awake_h + " / " + awake_m);
 
             mRealEntryList.add(new BarEntry(i++, (float) (24 - sleep_h + awake_h + (awake_m - sleep_m))));
             mObjectiveEntryList.add(new BarEntry(i++, (float) (24 - sleep_h + objective_h + (objective_m - sleep_m))));
